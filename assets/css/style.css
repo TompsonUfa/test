@@ -47,6 +47,15 @@ ul {
   background-color: #32373d;
   margin-left: 250px;
 }
+.block-wrapper {
+  width: 770px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
 /* Авторизация */
 .auth-wrap {
   width: 100%;
@@ -251,8 +260,9 @@ ul {
   background-color: rgb(50, 55, 61) !important;
   border: none !important;
 }
+.btn-plus {
+}
 .btn-add {
-  position: fixed;
   right: 10%;
   bottom: 10%;
   z-index: 200;

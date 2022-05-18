@@ -69,7 +69,7 @@ if(!isset($_SESSION['user_id'])){
         </nav> -->
         <div class="content">
             <div class="container-fluid">
-                <a class="btn btn-add" href="/addtest">Добавить</a>
+                <a class="btn btn-add position-fixed" href="/addtest">Добавить</a>
                 <div class="row justify-content-center list-cart">
                     <?php
                   require_once "../assets/php/test.php";
