@@ -1,13 +1,13 @@
-window.addEventListener('click', function (event) {
+window.addEventListener("click", function (event) {
   if (event.target.classList.contains("btn-add-options")) {
     let btnCreateOptions = event.target;
     let question = btnCreateOptions.parentNode.parentNode;
     let nubmerQuestion = question.dataset.listNumber;
 
-    let numberOptions = question.querySelector('.form-select').value;
+    let numberOptions = question.querySelector(".form-select").value;
     let type;
 
-    if (numberOptions == '2') {
+    if (numberOptions == "2") {
       type = "checkbox";
     } else {
       type = "radio";
@@ -27,23 +27,22 @@ window.addEventListener('click', function (event) {
         <input type="text" class="form-control" placeholder="Вариант" />
         </div>`
     );
-
-  } else if (event.target.classList.contains("numberOptions")) {
+  }
+});
+window.onchange = function (event) {
+  if (event.target.classList.contains("form-select")) {
     let nubmerOptions = event.target.value;
-    let question = event.target.parentNode.parentNode.parentNode;
-    let checkInput = question.querySelectorAll('.form-check-input');
-
+    let question = event.target.parentNode.parentNode;
+    let checkInput = question.querySelectorAll(".form-check-input");
     for (let i = 0; i < checkInput.length; i++) {
-      if (nubmerOptions == '2') {
-        checkInput[i].type = 'checkbox';
+      if (nubmerOptions == "2") {
+        checkInput[i].type = "checkbox";
       } else {
-        checkInput[i].type = 'radio';
+        checkInput[i].type = "radio";
       }
     }
-
-
   }
-})
+};
 let btnCreateQuestion = document.querySelector(".btn-add-question");
 btnCreateQuestion.addEventListener("click", function () {
   var question = document.querySelectorAll(".question");
@@ -81,6 +80,3 @@ btnCreateQuestion.addEventListener("click", function () {
     </div>`
   );
 });
-
-
-
